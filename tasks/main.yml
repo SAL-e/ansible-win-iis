@@ -7,7 +7,7 @@
 
 - name: "Enable Additional Web Server Roles"
   win_feature:
-    name: "{{ itme }}"
+    name: "{{ item }}"
     state: present
   with_items:
     "{{ iis_enable_roles }}"
