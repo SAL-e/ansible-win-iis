@@ -4,3 +4,10 @@
   win_feature:
     name: Web-Server
     state: present
+
+- name: "Enable Web Server Role ({{ item }})"
+  win_feature:
+    name: "{{ itme }}"
+    state: present
+  with_items:
+    iis_enable_roles

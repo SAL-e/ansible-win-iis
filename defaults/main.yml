@@ -1,2 +1,3 @@
 ---
-# defaults file for ansible-win-iis
+iis_enable_roles: []
+iis_disable_roles: []
