@@ -11,3 +11,10 @@
     state: present
   with_items:
     "{{ iis_enable_roles }}"
+
+- name: "Disable Some Web Server Roles"
+  win_feature:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    "{{ iis_disable_roles }}"
