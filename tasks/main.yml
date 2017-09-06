@@ -5,9 +5,9 @@
     name: Web-Server
     state: present
 
-- name: "Enable Web Server Role ({{ item }})"
+- name: "Enable Additional Web Server Roles"
   win_feature:
     name: "{{ itme }}"
     state: present
   with_items:
-    iis_enable_roles
+    "{{ iis_enable_roles }}"
