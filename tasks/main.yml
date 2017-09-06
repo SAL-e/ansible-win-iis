@@ -1,2 +1,6 @@
 ---
-# tasks file for ansible-win-iis
+
+- name: Enable Web Server (IIS) (Web-Server)
+  win_feature:
+    name: Web-Server
+    state: present
